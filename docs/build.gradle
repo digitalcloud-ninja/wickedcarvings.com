@@ -1,0 +1,27 @@
+plugins {
+    id 'base'
+    id 'com.github.node-gradle.node' version '3.5.1'
+}
+node {
+    download = true
+    version = '18.16.1'
+}
+repositories {
+    mavenCentral()
+}
+clean.delete << files('./src/.vuepress/.temp', './src/.vuepress/.cache', './src/.vuepress/dist', './dist')
+build {
+    dependsOn('docs.dist')
+}
+tasks.register('docs.dist', NpmTask) {
+    dependsOn('npmInstall')
+    args = ['run', 'docs:dist']
+}
+tasks.register('docs.info', NpmTask) {
+    dependsOn('npmInstall')
+    args = ['run', 'docs:info']
+}
+tasks.register('docs.preview', NpmTask) {
+    dependsOn('npmInstall')
+    args = ['run', 'docs:preview']
+}

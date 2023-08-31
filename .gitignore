@@ -1,6 +1,8 @@
 
-/docs/package-lock.json
-/docs/node_modules/
+/**/package-lock.json
+/**/node_modules/
+/**/.gradle/
+/**/build/
 /docs/src/.vuepress/.temp/
 /docs/src/.vuepress/.cache/
 /docs/src/.vuepress/dist/
