@@ -1,36 +1,16 @@
 {
-  "name": "wickedcarvings.com-docs",
-  "description": "WickedCarvings Application Documentation",
+  "name": "wickedcarvings-docs",
+  "description": "wickedcarvings.com/docs",
+  "author": "The DigitalCloud Ninja",
   "version": "1.0.0",
-  "repository": "https://github.com/digitalcloud-ninja/wickedcarvings.com.git",
   "license": "",
-  "main": "",
-  "private": true,
-  "engines": {
-    "node": ">=18.16.1"
+  "devDependencies": {
+    "vuepress": "^2.0.0-beta.67"
   },
   "scripts": {
-    "info": "WickedCarvings Application Documentation",
-    "vuepress:run": "vuepress dev src",
-    "vuepress:dist": "vuepress build src",
-    "vuepress:info": "vuepress info src"
+    "docs:info": "vuepress info src",
+    "docs:preview": "vuepress dev src",
+    "docs:dist": "vuepress build src"
   },
-  "dependencies": {
-    "axios": "^1.4.0",
-    "glob": "^10.3.3",
-    "swagger-ui": "5.3.0",
-    "vue": "^3.3.4",
-    "yaml": "^2.3.1",
-    "sass-loader": "^13.3.2",
-    "webpack": "^5.88.2",
-    "vuepress": "2.0.0-beta.66"
-  },
-  "devDependencies": {
-    "@vuepress/bundler-vite": "next",
-    "@vuepress/client": "next",
-    "@vuepress/plugin-register-components": "next",
-    "@vuepress/plugin-search": "next",
-    "@vuepress/theme-default": "next",
-    "@vuepress/utils": "next"
-  }
+  "main": "index.js"
 }
